@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var model = (List<DataLayer.Auto>)Model;
+}
+<h1>Autos</h1>
+<div class="row">
+    <ul>
+        @foreach (var auto in model)
+        {
+            <li>@Html.ActionLink(auto.GetNombre(), "Read", "Home", new { id = auto._id }, null)</li>
+        }
+    </ul>
+</div>
