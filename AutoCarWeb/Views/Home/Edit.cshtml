@@ -1,16 +1,16 @@
 ﻿
 @{
-    ViewBag.Title = "Read";
+    ViewBag.Title = "Edit";
     var _model = (DataLayer.Auto)Model;
 }
 <h1>@_model.GetNombre()</h1>
 <div class="row">
-    <form method="post">
+    <form method="post" action="Edit">
         <input type="hidden" name="_id" value="@_model._id" />
         <div class="col-md-6">
             <div class="form-group">
                 <label for="modelo">Modelo</label>
-                <input disabled class="form-control" id="modelo" placeholder="Ingresa el modelo"
+                <input class="form-control" id="modelo" placeholder="Ingresa el modelo"
                        name="Model"
                        value="@_model.Model">
             </div>
@@ -18,7 +18,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="marca">Marca</label>
-                <input disabled class="form-control" id="marca" placeholder="Ingresa la marca"
+                <input class="form-control" id="marca" placeholder="Ingresa la marca"
                        name="Brand"
                        value="@_model.Brand">
             </div>
@@ -26,7 +26,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="anio">Año</label>
-                <input disabled type="number" class="form-control" id="anio" placeholder="Ingresa el año"
+                <input type="number" class="form-control" id="anio" placeholder="Ingresa el año"
                        name="Year"
                        value="@_model.Year">
             </div>
@@ -34,46 +34,52 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="km">Kilometraje</label>
-                <input disabled type="number" class="form-control" id="km" placeholder="Ingresa el kilometraje"
+                <input type="number" class="form-control" id="km" placeholder="Ingresa el kilometraje"
+                       name="Km"
                        value="@_model.Km">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="extColor">Color exterior</label>
-                <input disabled class="form-control" id="extColor" placeholder="Ingresa el color exterior"
+                <input class="form-control" id="extColor" placeholder="Ingresa el color exterior"
+                       name="ExtColor"
                        value="@_model.ExtColor">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="intColor">Color interior</label>
-                <input disabled class="form-control" id="intColor" placeholder="Ingresa el color interior"
+                <input class="form-control" id="intColor" placeholder="Ingresa el color interior"
+                       name="IntColor"
                        value="@_model.IntColor">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="modelo">Litros</label>
-                <input disabled type="number" class="form-control" id="modelo" placeholder="Ingresa los litros"
+                <input type="number" class="form-control" id="modelo" placeholder="Ingresa los litros"
+                       name="Liters" step="0.1"
                        value="@_model.Liters">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="marca">Puertas</label>
-                <input disabled class="form-control" id="marca" placeholder="Ingresa las puertas"
+                <input class="form-control" id="marca" placeholder="Ingresa las puertas"
+                       name="Doors"
                        value="@_model.Doors">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="marca">Precio</label>
-                <input disabled type="number" class="form-control" id="marca" placeholder="Ingresa el precio"
+                <input type="number" class="form-control" id="marca" placeholder="Ingresa el precio"
+                       name="Price" step="0.01"
                        value="@_model.Price">
             </div>
         </div>
-        @Html.ActionLink("Editar", "Edit", "Home", new { id = _model._id }, null)
+        <input type="submit" class="btn btn-danger" value="Guardar" />
     </form>
 </div>
 

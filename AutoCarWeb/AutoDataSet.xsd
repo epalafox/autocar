@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AutoDataSet" targetNamespace="http://tempuri.org/AutoDataSet.xsd" xmlns:mstns="http://tempuri.org/AutoDataSet.xsd" xmlns="http://tempuri.org/AutoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AutoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AutoDataSet" msprop:Generator_UserDSName="AutoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AutoDT" msprop:Generator_TableClassName="AutoDTDataTable" msprop:Generator_TableVarName="tableAutoDT" msprop:Generator_TablePropName="AutoDT" msprop:Generator_RowDeletingName="AutoDTRowDeleting" msprop:Generator_RowChangingName="AutoDTRowChanging" msprop:Generator_RowEvHandlerName="AutoDTRowChangeEventHandler" msprop:Generator_RowDeletedName="AutoDTRowDeleted" msprop:Generator_UserTableName="AutoDT" msprop:Generator_RowChangedName="AutoDTRowChanged" msprop:Generator_RowEvArgName="AutoDTRowChangeEvent" msprop:Generator_RowClassName="AutoDTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:string" minOccurs="0" />
+              <xs:element name="Brand" msprop:Generator_ColumnVarNameInTable="columnBrand" msprop:Generator_ColumnPropNameInRow="Brand" msprop:Generator_ColumnPropNameInTable="BrandColumn" msprop:Generator_UserColumnName="Brand" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" msprop:Generator_UserColumnName="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:string" minOccurs="0" />
+              <xs:element name="Km" msprop:Generator_ColumnVarNameInTable="columnKm" msprop:Generator_ColumnPropNameInRow="Km" msprop:Generator_ColumnPropNameInTable="KmColumn" msprop:Generator_UserColumnName="Km" type="xs:string" minOccurs="0" />
+              <xs:element name="ExtColor" msprop:Generator_ColumnVarNameInTable="columnExtColor" msprop:Generator_ColumnPropNameInRow="ExtColor" msprop:Generator_ColumnPropNameInTable="ExtColorColumn" msprop:Generator_UserColumnName="ExtColor" type="xs:string" minOccurs="0" />
+              <xs:element name="IntColor" msprop:Generator_ColumnVarNameInTable="columnIntColor" msprop:Generator_ColumnPropNameInRow="IntColor" msprop:Generator_ColumnPropNameInTable="IntColorColumn" msprop:Generator_UserColumnName="IntColor" type="xs:string" minOccurs="0" />
+              <xs:element name="Liters" msprop:Generator_ColumnVarNameInTable="columnLiters" msprop:Generator_ColumnPropNameInRow="Liters" msprop:Generator_ColumnPropNameInTable="LitersColumn" msprop:Generator_UserColumnName="Liters" type="xs:string" minOccurs="0" />
+              <xs:element name="Doors" msprop:Generator_ColumnVarNameInTable="columnDoors" msprop:Generator_ColumnPropNameInRow="Doors" msprop:Generator_ColumnPropNameInTable="DoorsColumn" msprop:Generator_UserColumnName="Doors" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

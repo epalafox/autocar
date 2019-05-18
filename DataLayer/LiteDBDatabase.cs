@@ -12,23 +12,26 @@ namespace DataLayer
     {
         private static LiteDBDatabase Instance;
         private LiteDatabase _db;
-        private LiteDBDatabase()
+        
+        private LiteDBDatabase(string baseDir = "")
         {
+            if(string.IsNullOrEmpty(baseDir))
+                baseDir = AppDomain.CurrentDomain.BaseDirectory;
             System.IO.Directory.CreateDirectory(Path.Combine(
-                AppDomain.CurrentDomain.BaseDirectory,
+                baseDir,
                 "AppData"));
             _db = new LiteDatabase(
                 Path.Combine(
-                AppDomain.CurrentDomain.BaseDirectory,
+                baseDir,
                 "AppData",
                 "AutoCar.db"
                 ));
         }
-        public static LiteDBDatabase GetInstance()
+        public static LiteDBDatabase GetInstance(string baseDir = "")
         {
             if (Instance == null)
             {
-                Instance = new LiteDBDatabase();
+                Instance = new LiteDBDatabase(baseDir);
             }
             return Instance;
         }
@@ -51,6 +54,8 @@ namespace DataLayer
 
         public void UpdateAuto(Auto auto)
         {
+            var col = _db.GetCollection<Auto>("Auto");
+            col.Update(auto);
         }
     }
 }

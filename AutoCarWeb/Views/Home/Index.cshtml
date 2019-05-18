@@ -4,6 +4,7 @@
 }
 <h1>Autos</h1>
 <div class="row">
+    <a href="@Url.Action("Create", "Home")"><button class="pull-right btn btn-danger">Nuevo</button></a>
     <ul>
         @foreach (var auto in model)
         {

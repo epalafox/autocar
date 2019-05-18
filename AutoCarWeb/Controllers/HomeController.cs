@@ -27,10 +27,26 @@ namespace AutoCarWeb.Controllers
             var auto = _database.GetAutos().FirstOrDefault(x => x._id == id);
             return View(auto);
         }
-        [HttpPost]
-        public ActionResult Read(Auto auto)
+        [HttpGet]
+        public ActionResult Edit(int id)
         {
+            var auto = _database.GetAutos().FirstOrDefault(x => x._id == id);
             return View(auto);
+        }
+        [HttpPost]
+        public ActionResult Edit(Auto auto)
+        {
+            if (auto._id != 0)
+                _database.UpdateAuto(auto);
+            else
+                _database.InsertAuto(auto);
+            return View(auto);
+        }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            var auto = new Auto();
+            return View("Edit", auto);
         }
     }
 }
