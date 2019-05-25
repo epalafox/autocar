@@ -16,4 +16,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\DataLayer\DataLayer.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AddPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

@@ -200,6 +200,8 @@
     <Content Include="AutoDataSet.xss">
       <DependentUpon>AutoDataSet.xsd</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\d4autocar - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\d4autocar - Web Deploy.pubxml" />
     <None Include="Reporte.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

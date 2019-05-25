@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using DataLayer;
+using Xamarin.Forms;
 
 namespace AutoCarMobile.ViewModels
 {
@@ -43,7 +44,7 @@ namespace AutoCarMobile.ViewModels
                 }
             }
         }
-        private void LoadCars()
+		private void LoadCars()
         {
             IDatabase db = LiteDBDatabase.GetInstance(Interfaces.IDevice.dir);
             /*Auto auto = new Auto();
